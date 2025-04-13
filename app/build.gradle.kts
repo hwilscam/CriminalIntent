@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -50,7 +51,15 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.protolite.well.known.types)
     implementation(libs.androidx.recyclerview)
+
     implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.androidx.room.common)
+    implementation(libs.androidx.room.ktx)
+
+    ksp(libs.moshi.kotlin.codegen)
+    ksp(libs.androidx.room.compiler)
+
     androidTestImplementation(libs.androidx.fragment.testing)
 
     testImplementation(libs.junit)
