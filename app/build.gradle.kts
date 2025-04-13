@@ -2,7 +2,9 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
+    id("androidx.navigation.safeargs")
 }
+
 
 android {
     namespace = "com.hwilscam.criminalintent"
@@ -57,8 +59,13 @@ dependencies {
     implementation(libs.androidx.room.common)
     implementation(libs.androidx.room.ktx)
 
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.navigation.ui)
+
+
     ksp(libs.moshi.kotlin.codegen)
     ksp(libs.androidx.room.compiler)
+
 
     androidTestImplementation(libs.androidx.fragment.testing)
 

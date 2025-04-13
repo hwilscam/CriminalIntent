@@ -2,6 +2,7 @@ package com.hwilscam.criminalintent.database
 
 import androidx.room.Dao
 import androidx.room.Query
+import androidx.room.Update
 import com.hwilscam.criminalintent.Crime
 import kotlinx.coroutines.flow.Flow
 import java.util.UUID
@@ -16,5 +17,8 @@ interface CrimeDao {
 
     @Query("Select * From crime Where id=(:id)")
     suspend fun getCrime(id: UUID):Crime
+
+    @Update
+    suspend fun updateCrime(crime: Crime)
 
 }
