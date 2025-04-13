@@ -45,16 +45,12 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-
     implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.ui.test.android)
-
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.protolite.well.known.types)
     implementation(libs.androidx.recyclerview)
     implementation(libs.kotlinx.coroutines.core)
-    implementation(libs.kotlinx.coroutines.android)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
     androidTestImplementation(libs.androidx.fragment.testing)
 
     testImplementation(libs.junit)
